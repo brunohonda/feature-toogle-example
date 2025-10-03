@@ -1,9 +1,11 @@
 <mat-toolbar class="nav-bar">
   <span routerLink="/">Feature Toogle Examples</span>
   <div>
-    <button matButton [routerLink]="['new-feature']">
-      Nova funcionalidade
-    </button>
+    @if (isNewFeatureEnabled()) {
+      <button matButton [routerLink]="['new-feature']">
+        Nova funcionalidade
+      </button>
+    }
   </div>
 </mat-toolbar>
 <main>
