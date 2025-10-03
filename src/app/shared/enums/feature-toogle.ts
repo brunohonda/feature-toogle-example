@@ -1,3 +1,3 @@
 export enum FeatureToogle {
-  newFeature = 'newFeature',
+  newFeature = 'Nova Funcionalidade',
 }
