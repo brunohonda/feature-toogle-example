@@ -44,3 +44,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     container-text-color: var(--mat-sys-on-surface),
   ));
 }
+
+[routerLink] {
+  cursor: pointer;
+}
