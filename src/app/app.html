@@ -8,6 +8,28 @@
     }
   </div>
 </mat-toolbar>
-<main>
+<mat-drawer-container autosize>
+  <mat-drawer class="sidenav-container" mode="side" [opened]="true">
+    <mat-card class="sidenav-card">
+      <mat-card-content>
+        <h2>Toogles</h2>
+
+        @for (feature of features; track $index) {
+          <mat-slide-toggle
+            [checked]="isFeatureEnabled(feature)"
+            [hideIcon]="true"
+            (change)="updateFeatureToogle(feature, $event.checked)"
+          >
+            {{ feature }}
+          </mat-slide-toggle>
+        }
+      </mat-card-content>
+    </mat-card>
+  </mat-drawer>
+
   <router-outlet />
+
+</mat-drawer-container>
+<main>
+
 </main>

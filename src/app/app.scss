@@ -9,3 +9,13 @@
   display: flex;
   justify-content: space-between;
 }
+
+.sidenav {
+  &-container {
+    padding: 8px;
+  }
+
+  &-card {
+    height: 100%;
+  }
+}
