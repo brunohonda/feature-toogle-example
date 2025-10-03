@@ -1,0 +1,11 @@
+:host {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
