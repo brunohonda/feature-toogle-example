@@ -1,6 +1,11 @@
 <mat-toolbar class="nav-bar">
   <span>Feature Toogle Examples</span>
   <div>
+    <button matButton [routerLink]="['new-feature']">
+      Nova funcionalidade
+    </button>
   </div>
 </mat-toolbar>
-<router-outlet />
+<main>
+  <router-outlet />
+</main>
