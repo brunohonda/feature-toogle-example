@@ -1,18 +1,12 @@
 import { computed, Injectable, Signal, signal, WritableSignal } from '@angular/core';
+import { environment } from '../../../environments/environment';
 import { FeatureToggleEnum } from '../enums/feature-toggle.enum';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FeatureToggleService {
-  private readonly _features: WritableSignal<Record<FeatureToggleEnum, boolean >> = signal({
-    [FeatureToggleEnum.fragmentNew]: false,
-    [FeatureToggleEnum.fragmentImprovement]: false,
-    [FeatureToggleEnum.newFeature]: false,
-    [FeatureToggleEnum.routeGuardBlock]: false,
-    [FeatureToggleEnum.routeVersion]: false,
-    [FeatureToggleEnum.services]: false,
-  });
+  private readonly _features: WritableSignal<Record<FeatureToggleEnum, boolean >> = signal(environment.featureToggles);
 
   getToggle(feature: FeatureToggleEnum): Signal<boolean> {
     return computed(() => this._features()[feature]);

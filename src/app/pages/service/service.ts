@@ -1,4 +1,3 @@
-import { AsyncPipe, JsonPipe } from '@angular/common';
 import { Component, Signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -9,8 +8,6 @@ import { SwapiService } from '../../shared/services/swapi.service';
   imports: [
     MatButtonModule,
     MatCardModule,
-    AsyncPipe,
-    JsonPipe,
   ],
   templateUrl: './service.html',
   styleUrl: './service.scss'
