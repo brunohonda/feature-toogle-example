@@ -10,11 +10,11 @@ export class FeatureToggleService {
     [FeatureToggleEnum.routeGuardBlock]: false,
   });
 
-  getToogle(feature: FeatureToggleEnum): Signal<boolean> {
+  getToggle(feature: FeatureToggleEnum): Signal<boolean> {
     return computed(() => this._features()[feature]);
   }
 
-  setFeatureToogle(feature: FeatureToggleEnum, isEnabled: boolean) {
+  setFeatureToggle(feature: FeatureToggleEnum, isEnabled: boolean) {
     this._features.update((currentFeatures) => ({
       ...currentFeatures,
       [feature]: isEnabled

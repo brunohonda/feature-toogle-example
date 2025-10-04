@@ -32,14 +32,14 @@ export class App {
   constructor(
     private readonly _featureToggle: FeatureToggleService
   ) {
-    this.isNewFeatureEnabled = this._featureToggle.getToogle(FeatureToggleEnum.newFeature);
+    this.isNewFeatureEnabled = this._featureToggle.getToggle(FeatureToggleEnum.newFeature);
   }
 
   isFeatureEnabled(feature: string): boolean {
-    return this._featureToggle.getToogle(feature as FeatureToggleEnum)();
+    return this._featureToggle.getToggle(feature as FeatureToggleEnum)();
   }
 
-  updateFeatureToogle(feature: string, isEnabled: boolean): void {
-    this._featureToggle.setFeatureToogle(feature as FeatureToggleEnum, isEnabled);
+  updateFeatureToggle(feature: string, isEnabled: boolean): void {
+    this._featureToggle.setFeatureToggle(feature as FeatureToggleEnum, isEnabled);
   }
 }

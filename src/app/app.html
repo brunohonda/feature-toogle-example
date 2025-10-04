@@ -15,13 +15,13 @@
   <mat-drawer class="sidenav-container" mode="side" [opened]="true">
     <mat-card class="sidenav-card">
       <mat-card-content class="sidenav-card-content">
-        <h2>Toogles</h2>
+        <h2>Toggles</h2>
 
         @for (feature of features; track $index) {
           <mat-slide-toggle
             [checked]="isFeatureEnabled(feature)"
             [hideIcon]="true"
-            (change)="updateFeatureToogle(feature, $event.checked)"
+            (change)="updateFeatureToggle(feature, $event.checked)"
           >
             {{ feature }}
           </mat-slide-toggle>
