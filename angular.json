@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "feature-toogle-example": {
+    "feature-toggle-example": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -58,10 +58,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "feature-toogle-example:build:production"
+              "buildTarget": "feature-toggle-example:build:production"
             },
             "development": {
-              "buildTarget": "feature-toogle-example:build:development"
+              "buildTarget": "feature-toggle-example:build:development"
             }
           },
           "defaultConfiguration": "development"
