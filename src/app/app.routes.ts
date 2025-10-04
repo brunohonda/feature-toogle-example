@@ -12,4 +12,13 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/route-guard-block/route-guard-block').then(m => m.RouteGuardBlock),
     canActivate: [featureToogleGuard(FeatureToggleEnum.routeGuardBlock)]
   },
+  {
+    path: 'versioned-route',
+    loadComponent: () => import('./pages/route-version-1/route-version-1').then(m => m.RouteVersion1),
+  },
+  {
+    path: 'versioned-route/v2',
+    loadComponent: () => import('./pages/route-version-2/route-version-2').then(m => m.RouteVersion2),
+    canActivate: [featureToogleGuard(FeatureToggleEnum.routeVersion, [ 'versioned-route' ])]
+  },
 ];

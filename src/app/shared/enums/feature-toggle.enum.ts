@@ -1,4 +1,5 @@
 export enum FeatureToggleEnum {
   newFeature = 'Nova Funcionalidade',
-  routeGuardBlock="Rota bloqueada",
+  routeGuardBlock= 'Rota bloqueada',
+  routeVersion = 'Rota versionada',
 }

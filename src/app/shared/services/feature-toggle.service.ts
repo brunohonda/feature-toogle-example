@@ -8,6 +8,7 @@ export class FeatureToggleService {
   private readonly _features: WritableSignal<Record<FeatureToggleEnum, boolean >> = signal({
     [FeatureToggleEnum.newFeature]: true,
     [FeatureToggleEnum.routeGuardBlock]: false,
+    [FeatureToggleEnum.routeVersion]: false,
   });
 
   getToggle(feature: FeatureToggleEnum): Signal<boolean> {
