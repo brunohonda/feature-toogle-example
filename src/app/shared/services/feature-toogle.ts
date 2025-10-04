@@ -7,6 +7,7 @@ import { FeatureToogle as FeatureToogleEnum } from './../enums/feature-toogle';
 export class FeatureToogle {
   private readonly _features: WritableSignal<Record<FeatureToogleEnum, boolean >> = signal({
     [FeatureToogleEnum.newFeature]: true,
+    [FeatureToogleEnum.routeGuardBlock]: false,
   });
 
   getToogle(feature: FeatureToogleEnum): Signal<boolean> {

@@ -25,6 +25,7 @@ import { FeatureToogle } from './shared/services/feature-toogle';
   styleUrl: './app.scss'
 })
 export class App {
+  public FeatureToogleEnum = FeatureToogleEnum;
   public features = Object.values(FeatureToogleEnum);
   public isNewFeatureEnabled: Signal<boolean>;
 

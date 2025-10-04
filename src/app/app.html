@@ -3,15 +3,18 @@
   <div>
     @if (isNewFeatureEnabled()) {
       <button matButton [routerLink]="['new-feature']">
-        Nova funcionalidade
+        {{ FeatureToogleEnum.newFeature }}
       </button>
     }
+    <button matButton [routerLink]="['route-guard-block']">
+      {{ FeatureToogleEnum.routeGuardBlock }}
+    </button>
   </div>
 </mat-toolbar>
 <mat-drawer-container autosize>
   <mat-drawer class="sidenav-container" mode="side" [opened]="true">
     <mat-card class="sidenav-card">
-      <mat-card-content>
+      <mat-card-content class="sidenav-card-content">
         <h2>Toogles</h2>
 
         @for (feature of features; track $index) {
