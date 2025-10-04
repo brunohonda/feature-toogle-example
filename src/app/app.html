@@ -3,11 +3,11 @@
   <div>
     @if (isNewFeatureEnabled()) {
       <button matButton [routerLink]="['new-feature']">
-        {{ FeatureToogleEnum.newFeature }}
+        {{ FeatureToggleEnum.newFeature }}
       </button>
     }
     <button matButton [routerLink]="['route-guard-block']">
-      {{ FeatureToogleEnum.routeGuardBlock }}
+      {{ FeatureToggleEnum.routeGuardBlock }}
     </button>
   </div>
 </mat-toolbar>

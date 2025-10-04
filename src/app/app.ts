@@ -6,7 +6,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { FeatureToogle as FeatureToogleEnum } from './shared/enums/feature-toogle';
+import { FeatureToggle as FeatureToggleEnum } from './shared/enums/feature-toggle';
 import { FeatureToogle } from './shared/services/feature-toogle';
 
 @Component({
@@ -25,21 +25,21 @@ import { FeatureToogle } from './shared/services/feature-toogle';
   styleUrl: './app.scss'
 })
 export class App {
-  public FeatureToogleEnum = FeatureToogleEnum;
-  public features = Object.values(FeatureToogleEnum);
+  public FeatureToggleEnum = FeatureToggleEnum;
+  public features = Object.values(FeatureToggleEnum);
   public isNewFeatureEnabled: Signal<boolean>;
 
   constructor(
-    private readonly _featureToogle: FeatureToogle
+    private readonly _featureToggle: FeatureToogle
   ) {
-    this.isNewFeatureEnabled = this._featureToogle.getToogle(FeatureToogleEnum.newFeature);
+    this.isNewFeatureEnabled = this._featureToggle.getToogle(FeatureToggleEnum.newFeature);
   }
 
   isFeatureEnabled(feature: string): boolean {
-    return this._featureToogle.getToogle(feature as FeatureToogleEnum)();
+    return this._featureToggle.getToogle(feature as FeatureToggleEnum)();
   }
 
   updateFeatureToogle(feature: string, isEnabled: boolean): void {
-    this._featureToogle.setFeatureToogle(feature as FeatureToogleEnum, isEnabled);
+    this._featureToggle.setFeatureToogle(feature as FeatureToggleEnum, isEnabled);
   }
 }

@@ -1,5 +1,5 @@
 import { computed, Injectable, Signal, signal, WritableSignal } from '@angular/core';
-import { FeatureToogle as FeatureToogleEnum } from './../enums/feature-toogle';
+import { FeatureToggle as FeatureToogleEnum } from '../enums/feature-toggle';
 
 @Injectable({
   providedIn: 'root'

@@ -1,4 +1,4 @@
-export enum FeatureToogle {
+export enum FeatureToggle {
   newFeature = 'Nova Funcionalidade',
   routeGuardBlock="Guarda de rota",
 }
