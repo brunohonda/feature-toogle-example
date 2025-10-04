@@ -7,7 +7,12 @@
   </header>
   <mat-card class="sidenav-card">
     <mat-card-content>
-      <pre>{{ people() | json }}</pre>
+      @if(people().name) {
+        <h4>{{ people().name }}</h4>
+        <p>{{ people().originFilm }}</p>
+      } @else {
+        <p>{{ people().message }}</p>
+      }
     </mat-card-content>
   </mat-card>
 </section>
@@ -15,11 +20,18 @@
 <section>
   <header>
     <h3>Serviço versionado</h3>
-    <button matButton>Requisição</button>
+    <button matButton (click)="requestOriginFilm()">Requisição</button>
   </header>
   <mat-card class="sidenav-card">
     <mat-card-content>
-      <pre></pre>
+      @if(originFilm().episode) {
+      <h4>{{ originFilm().episode }}</h4>
+        @if(originFilm().opening_crawl) {
+          <p>{{ originFilm().opening_crawl }}</p>
+        }
+      } @else {
+        <p>{{ originFilm().message }}</p>
+      }
     </mat-card-content>
   </mat-card>
 </section>

@@ -17,14 +17,20 @@ import { SwapiService } from '../../shared/services/swapi.service';
 })
 export class Service {
   public people: Signal<any>;
+  public originFilm: Signal<any>;
 
   constructor(
     private readonly _swapiService: SwapiService,
   ) {
-    this.people = this._swapiService.people
+    this.people = this._swapiService.people;
+    this.originFilm = this._swapiService.originFilm;
   }
 
   public requestPeople(): void {
     this._swapiService.getPeople();
+  }
+
+  public requestOriginFilm(): void {
+    this._swapiService.getOriginFilm();
   }
 }
