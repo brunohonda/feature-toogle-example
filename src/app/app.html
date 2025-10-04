@@ -24,7 +24,10 @@
   <mat-drawer class="sidenav-container" mode="side" [opened]="true">
     <mat-card class="sidenav-card">
       <mat-card-content class="sidenav-card-content">
-        <h2>Toggles</h2>
+        <header class="sidenav-card-header">
+          <h2>Toggles</h2>
+          <button matButton (click)="resetFeatureToggles()">Reset</button>
+        </header>
 
         @for (feature of features; track $index) {
           <mat-slide-toggle

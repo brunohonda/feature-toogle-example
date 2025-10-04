@@ -39,6 +39,10 @@ export class App {
     return this._featureToggle.getToggle(feature as FeatureToggleEnum)();
   }
 
+  resetFeatureToggles(): void {
+    this._featureToggle.reset();
+  }
+
   updateFeatureToggle(feature: string, isEnabled: boolean): void {
     this._featureToggle.setFeatureToggle(feature as FeatureToggleEnum, isEnabled);
   }

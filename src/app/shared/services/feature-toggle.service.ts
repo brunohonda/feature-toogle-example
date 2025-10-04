@@ -24,4 +24,11 @@ export class FeatureToggleService {
       [feature]: isEnabled
     }));
   }
+
+  reset() {
+    Object.values(FeatureToggleEnum)
+      .forEach(feature => {
+        this.setFeatureToggle(feature, false);
+      });
+  }
 }
