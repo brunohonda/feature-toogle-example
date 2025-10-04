@@ -4,7 +4,7 @@ import { FeatureToggleEnum } from '../enums/feature-toggle.enum';
 @Injectable({
   providedIn: 'root'
 })
-export class FeatureToogle {
+export class FeatureToggleService {
   private readonly _features: WritableSignal<Record<FeatureToggleEnum, boolean >> = signal({
     [FeatureToggleEnum.newFeature]: true,
     [FeatureToggleEnum.routeGuardBlock]: false,

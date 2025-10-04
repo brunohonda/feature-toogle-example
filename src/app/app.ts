@@ -7,7 +7,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { FeatureToggleEnum } from './shared/enums/feature-toggle.enum';
-import { FeatureToogle } from './shared/services/feature-toogle';
+import { FeatureToggleService } from './shared/services/feature-toggle.service';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +30,7 @@ export class App {
   public isNewFeatureEnabled: Signal<boolean>;
 
   constructor(
-    private readonly _featureToggle: FeatureToogle
+    private readonly _featureToggle: FeatureToggleService
   ) {
     this.isNewFeatureEnabled = this._featureToggle.getToogle(FeatureToggleEnum.newFeature);
   }
