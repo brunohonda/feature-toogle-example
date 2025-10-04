@@ -3,11 +3,11 @@
 <section>
   <header>
     <h3>Serviço bloqueado</h3>
-    <button matButton>Requisição</button>
+    <button matButton (click)="requestPeople()">Requisição</button>
   </header>
   <mat-card class="sidenav-card">
     <mat-card-content>
-      <pre></pre>
+      <pre>{{ people() | json }}</pre>
     </mat-card-content>
   </mat-card>
 </section>
