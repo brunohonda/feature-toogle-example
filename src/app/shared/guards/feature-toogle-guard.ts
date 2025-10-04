@@ -15,11 +15,10 @@ export const featureToogleGuard = (featureName: FeatureToggleEnum, commands?: re
   }
 
   if (commands) {
-    console.warn(`BANANA - Redirecting to ${commands.join('/')}`);
     return router.createUrlTree(commands);
   }
-  console.warn('BANANA - Opening snack bar notification');
+
   snackBar.open(`Feature "${featureName}" is disabled`, 'Close', { duration: 3000 });
 
-    return false
+  return false
 };

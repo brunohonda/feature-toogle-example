@@ -21,4 +21,8 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/route-version-2/route-version-2').then(m => m.RouteVersion2),
     canActivate: [featureToogleGuard(FeatureToggleEnum.routeVersion, [ 'versioned-route' ])]
   },
+  {
+    path: 'fragments',
+    loadComponent: () => import('./pages/partial-toogle/partial-toogle').then(m => m.PartialToogle)
+  },
 ];

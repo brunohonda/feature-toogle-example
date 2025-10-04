@@ -6,7 +6,9 @@ import { FeatureToggleEnum } from '../enums/feature-toggle.enum';
 })
 export class FeatureToggleService {
   private readonly _features: WritableSignal<Record<FeatureToggleEnum, boolean >> = signal({
-    [FeatureToggleEnum.newFeature]: true,
+    [FeatureToggleEnum.fragmentNew]: false,
+    [FeatureToggleEnum.fragmentImprovement]: false,
+    [FeatureToggleEnum.newFeature]: false,
     [FeatureToggleEnum.routeGuardBlock]: false,
     [FeatureToggleEnum.routeVersion]: false,
   });

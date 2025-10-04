@@ -1,0 +1,15 @@
+<h2>Fragmentos</h2>
+
+<h3>Fragmento novo</h3>
+
+@if (isFragmentNewEnabled()) {
+  <p>Este é um novo fragmento habilitado pela feature toggle "Novo fragmento".</p>
+}
+
+<h3>Fragmento melhorado</h3>
+
+@if (isFragmentImprovementEnabled()) {
+  <p>Este é um fragmento melhorado habilitado pela feature toggle "Melhoria de fragmento".</p>
+} @else {
+  <p>Este é o fragmento padrão.</p>
+}

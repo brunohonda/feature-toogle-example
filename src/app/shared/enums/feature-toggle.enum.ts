@@ -1,5 +1,7 @@
 export enum FeatureToggleEnum {
-  newFeature = 'Nova Funcionalidade',
+  fragmentNew = 'Novo fragmento',
+  fragmentImprovement = 'Melhoria de fragmento',
+  newFeature = 'Nova funcionalidade',
   routeGuardBlock= 'Rota bloqueada',
   routeVersion = 'Rota versionada',
 }
