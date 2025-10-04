@@ -76,6 +76,14 @@ export class SwapiService {
   }
 
   private getOriginFilmV2(): void {
+    if(!this._people().originFilm) {
+      this._originFilm.set({
+        code: 'error.code.error-message',
+        message: 'Carregue um personagem antes',
+      });
+      return;
+    }
+
     this._http
       .get(this._people().originFilm)
       .pipe(
