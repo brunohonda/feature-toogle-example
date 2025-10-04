@@ -29,4 +29,9 @@ export const routes: Routes = [
     path: 'services',
     loadComponent: () => import('./pages/service/service').then(m => m.Service)
   },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'fragments'
+  }
 ];
