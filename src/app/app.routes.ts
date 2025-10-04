@@ -25,4 +25,8 @@ export const routes: Routes = [
     path: 'fragments',
     loadComponent: () => import('./pages/partial-toogle/partial-toogle').then(m => m.PartialToogle)
   },
+  {
+    path: 'services',
+    loadComponent: () => import('./pages/service/service').then(m => m.Service)
+  },
 ];

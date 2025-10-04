@@ -11,6 +11,7 @@ export class FeatureToggleService {
     [FeatureToggleEnum.newFeature]: false,
     [FeatureToggleEnum.routeGuardBlock]: false,
     [FeatureToggleEnum.routeVersion]: false,
+    [FeatureToggleEnum.services]: false,
   });
 
   getToggle(feature: FeatureToggleEnum): Signal<boolean> {

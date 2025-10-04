@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 8px;
+}
+
+section {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
