@@ -1,20 +1,20 @@
 import { computed, Injectable, Signal, signal, WritableSignal } from '@angular/core';
-import { FeatureToggle as FeatureToogleEnum } from '../enums/feature-toggle';
+import { FeatureToggleEnum } from '../enums/feature-toggle.enum';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FeatureToogle {
-  private readonly _features: WritableSignal<Record<FeatureToogleEnum, boolean >> = signal({
-    [FeatureToogleEnum.newFeature]: true,
-    [FeatureToogleEnum.routeGuardBlock]: false,
+  private readonly _features: WritableSignal<Record<FeatureToggleEnum, boolean >> = signal({
+    [FeatureToggleEnum.newFeature]: true,
+    [FeatureToggleEnum.routeGuardBlock]: false,
   });
 
-  getToogle(feature: FeatureToogleEnum): Signal<boolean> {
+  getToogle(feature: FeatureToggleEnum): Signal<boolean> {
     return computed(() => this._features()[feature]);
   }
 
-  setFeatureToogle(feature: FeatureToogleEnum, isEnabled: boolean) {
+  setFeatureToogle(feature: FeatureToggleEnum, isEnabled: boolean) {
     this._features.update((currentFeatures) => ({
       ...currentFeatures,
       [feature]: isEnabled

@@ -6,7 +6,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { FeatureToggle as FeatureToggleEnum } from './shared/enums/feature-toggle';
+import { FeatureToggleEnum } from './shared/enums/feature-toggle.enum';
 import { FeatureToogle } from './shared/services/feature-toogle';
 
 @Component({
